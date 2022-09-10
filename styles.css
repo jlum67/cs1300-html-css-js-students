@@ -1,7 +1,13 @@
 #cs1300-gallery {
   background-color: lightblue;
+  font-family: 'Poppins', sans-serif;
 }
 
-.gallery-container {
+.gallery-item-container {
   /* TODO add styles (hint: use flex!) https://www.w3schools.com/cssref/ */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row; 
+  flex-wrap: wrap;
 }

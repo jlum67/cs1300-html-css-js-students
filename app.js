@@ -12,7 +12,7 @@ const apiRequest = async () => {
    */
 
   // TODO fill in your own port number 
-  const PORT_NUMBER = "";
+  const PORT_NUMBER = "8010";
 
   const baseUrl = `http://localhost:${PORT_NUMBER}/proxy/api/`
 
@@ -45,7 +45,36 @@ const updatePage = async () => {
   // TODO: Use either `map` and/or `filter` to extract some data from the array of fruit objects
   // For example, find "name of all fruits whose sugar > 15", 
 
+  // const extract = fruitsArray.filter(sugar);
+
+  const filtered = fruitsArray.filter((fruit)=>{return fruit.nutritions.sugar > 15});
+
+  // function sugar(num) {
+  //   return num.get("nutritions").get("sugar") > 15
+  // }
+
   // TODO: Create a new HTML element to display your data 
+
+  
+  // const exampleAddElement = () => {
+    // Create a new HTML element and set its properties
+
+  for (i = 0; i < filtered.length; i++) {
+    const newElement = document.createElement('div');
+    newElement.innerHTML = filtered[i].name;
+    // newElement.append(filtered)
+  
+    // Append the new element to an existing part of the webpage
+    const existingElement = document.getElementById('cs1300-gallery');
+    existingElement.append(newElement);
+
+
+  }
+  
+  console.log(filtered)
+
+    // document.append(existingElement)
+  // }
 
   // TODO: Append your new element to the page
 
